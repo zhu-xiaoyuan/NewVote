@@ -1,0 +1,41 @@
+<extend name="Public/base" />
+<block name='title'><title>添加用户</title></block>
+<block name="link">
+	<link rel="stylesheet" type="text/css" href="__CSS__/user.css">
+	<script type="text/javascript" src="__JS__/user.js"></script>
+</block>
+<block name="other">
+</block>
+<block name="nav">
+	<ul id="bar">
+		<li id="launch" class="tab static"><a href="{:U('index/index')}">发起投票</a></li>
+		<li id="call-out" class="tab static"><a href="{:U('Callout/index')}">唱　　票</a></li>
+		<li id="manage" class="tab static"><a href="{:U('Manage/index')}">投票管理</a></li>
+	</ul>
+</block>
+<block name="content">
+<div class="main">
+	<div class="theme"><h2>添加用户<a id="manage_user" href="__URL__/index">管理用户</a></h2></div>
+	<form class="user_form">
+		<div class="form-item">
+		<label class="item_name">用户名</label><input type="text" name="account" class="" /><label class='form_info null_info'>用户名为5-12位字符</label><label class='form_info_1'>用户名已存在</label>
+		</div>
+		<div class="form-item">
+		<label class="item_name">密码</label><input type="password" name="password" class="" /><label class='form_info null_info'>请输入密码</label><label class='form_info_block'>
+		<div class="password_info">
+		<span class='em_bar'><em class='em_a'>◆</em><em class='em_b'>◆</em></span>
+			<ul class="check_bar">
+				<li class="check_bar_1">长度为6-14位字符</li>
+				<li class="check_bar_2">支持数字,大小写字母和下划线</li>
+				<li class="check_bar_3">不允许有空格</li>
+			</ul>
+		</div>
+		</label>
+		</div>
+		<div class="form-item">
+		<label class="item_name">确认密码</label><input type="password" name="password_again" class="" /><label class='form_info'>密码不一致</label><label class='null_info'>请再次确认密码</label>
+		</div>
+		<button type="button" id="submit">添　加</button>
+	</form>
+</div>
+</block>

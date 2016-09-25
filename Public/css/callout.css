@@ -1,0 +1,167 @@
+#result_panel{
+	height:350px
+}
+.nomal{
+	/*display: none;*/
+}
+#rebowl,#check-connection{
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 3px; 
+}
+#check-connection{
+	width: 200px
+}
+#revote_bar{
+	position: absolute;
+	width: 280px;
+	height: 165px;
+	background-color: #fff;
+	border:2px solid #C4C4C4;
+	text-align: center;
+	display: none;
+}
+h4{
+	font-size: 16px;
+	font-weight: bolder;
+	text-align: center;
+	margin: 20px 0px
+}
+.revote_form_item{
+	width: 60%;
+	margin: 10px auto;
+}
+#revote_attend_num,#revote_prepare_num{
+	margin-left: 20px;
+}
+#sure_revote,#cancel_revote{
+	margin: 10px 10px;
+	width: 80px;
+}
+div#tab-call-out{
+	text-align: left;
+}
+span.show-num{
+	display: block;
+	width: 58px;
+	height: 62px;
+	color: #159713;
+	font-size: 50px;
+	line-height: 58px;
+	text-align: center;
+	margin: auto;
+	background-image: url(../image/show-num.png);
+}
+div#call-out-panel{
+	background: #ECECEC;
+	width: 92%;
+	height: 190px;
+	padding: 25px 4%;
+	margin: 0px auto 30px auto;
+	border-radius: 5px;
+}
+label#notice{
+	display: block;
+	margin: 10px 0px 20px 0px
+}
+label#notice_2{
+	font-size: 10px;
+	display: block;
+	margin: 10px 0px 20px 0px;
+}
+div#status-panel{
+	width: 69%;
+	height: 100%;
+	float: left;
+	background:#fff;
+	padding-left: 30px; 
+	padding-right: 50px;
+	border-radius: 5px;
+}
+div#status-panel>p{
+	font-size: 12px;
+	margin: 18px 0;
+	text-align: left;
+}
+div#num-panel{
+	display: inline-block;
+	float: left;
+	text-align: center;
+	/*padding: 10px 20px;*/
+	margin-right: 5%;
+	width: 15%;
+	height: 100%;
+	font-size: 8px;
+	letter-spacing: 2px;
+}
+button#refresh{
+	width: 65px;
+}
+button#finish{
+	float: right;
+}
+.mark{
+	background-color: #F1D79C;
+}
+.mark>td{
+background-color: #F1D79C;
+}
+.valid{
+	background-color: #BCBCBC;
+}
+.valid>td{
+	background-color: #BCBCBC;
+}
+
+th#result-1{
+	width: 11%;
+}
+th#result-2{
+	width: 15.6%;
+}
+th#result-3{
+	width: 10%;
+}
+th#result-4{
+	width: 10%;
+}
+th#result-5{
+	width: 11.6%;
+}
+th#result-6{
+	width: 16%;
+}
+th#result-7{
+	width: 15.6%;
+}
+th#result-8{
+	width: 15.6%;
+}
+th#result-9{
+	width: 25%;
+}
+.info-item{
+	text-align: left;
+	/*width: 86%;
+	padding: 0px 7%;*/
+	margin: 19px 0px;
+}
+.info-item>label{
+	margin-right: 8px;
+}
+.info-name{
+	display: inline-block;
+	width: 70px;
+
+}
+.info-intro{
+	display: inline-block;
+	width: 70px;
+	vertical-align: top;
+}
+
+.info-con{
+	display: inline-block;
+	width: 300px;
+	word-wrap: break-word;
+}

@@ -1,0 +1,198 @@
+/*发起投票*/
+
+#info_panel{
+	background-color: #ECECEC;
+	position: relative;
+	height: 150px;
+	padding: 20px 2.4%;
+	margin-bottom: 20px;
+}
+input#theme{
+	height: 18px;
+	width: 24%;
+}
+textarea#describe{
+	width: 36%;
+	height: 80px;
+}
+label[for=describe]{
+	vertical-align: top;
+}
+label.notice_label{
+	color:#999;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 4px;
+}
+#choose_bar{
+	margin-bottom: 3px;
+	vertical-align: bottom;
+}
+#choose_bar>label{
+	vertical-align: bottom;
+}
+#is_show_name{
+	display: none;
+}
+div#check_show{
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	margin: 0px 5px 0px 10px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.check_on{
+	background-image: url(../image/check_on.png);
+}
+.check_off{
+	background-image: url(../image/check_off.png);
+}
+#choose_bar span{
+	vertical-align: bottom;
+}
+
+button#add-attend-person{
+	margin-left: 30px;
+	background-color: #25A51C;
+	float: right;
+	margin-top: -10px
+}
+button#create-jury-list{
+	width: 79px;
+	float: right;
+}
+button#print-jury-list{
+	width: 79px;
+	float: right;
+	margin: 0px 0px 0px 20px;
+	color: #fff
+}
+button.action{
+	background:#323232;
+}
+button.disable{
+	background: #bbb;
+}
+button#save{
+	margin-left: 30px;
+}
+label#rule{
+	width: 300px;
+	margin-left: 30px;
+	display: none;
+	vertical-align: middle;
+}
+label.radio_label{
+	margin: 0 2px;
+}
+a[class^=operate-]{
+	display: inline-block;
+	color:#7979BF;
+	height: 14px;
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+a.operate-edit-attend{
+	background-image: url(../image/edit.png);
+}
+a.operate-del-attend{
+	background-image: url(../image/delete.png);
+}
+/*结束  发起投票*/
+
+.attend-1,.attend-2,.attend-3{
+	width: 11%
+}
+.attend-4{
+	width:44%;
+}
+td.attend-4{
+	color:-webkit-link;
+	cursor: pointer;
+}
+td.attend-4:hover{
+	text-decoration: underline;
+}
+th#jury-1{
+	width: 16.6%
+}
+table{
+	margin-bottom: 20px
+}
+
+.dialog{
+	width: 360px;
+	height: 250px;
+}
+.dialog input{
+	width: 100px;
+	height: 16px;
+}
+.dialog textarea{
+	width: 270px;
+	height: 80px;
+	resize: none;
+}
+.lay-form-item span{
+	color: #E60012;
+	margin:0px 0px 0px 8px;
+	vertical-align: top;
+}
+.lay-form-item{
+	display: inline-block;
+	margin: 15px 0px 0px 15px;
+	text-align: left;
+	float: left;
+}
+.dialog label{
+	vertical-align: top;
+}
+#add-dialog-sure,#edit-dialog-sure,.dialog-cancel{
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+.warning{
+	display: inline-block;
+	width: 300px;
+	color: #E60012;
+	text-align: left;
+	padding: 10px 0px 10px 60px;
+}
+.dialog button{
+	width: 65px;
+	margin: 0px 10px 0px 10px;
+}
+.del_a{
+	margin: 0px;
+	text-indent:10px;
+}
+.del_b{
+	text-indent:35px;
+	margin: 10px;
+}
+.layer_info_item{
+	display: block;
+	margin: 0px 0px 15px 0px;
+	text-align: left;
+}
+.layer_info_item label{
+	display: inline-block;
+	vertical-align: top;
+}
+.info_name{
+	width: 42px;
+}
+.info_intro{
+	width: 340px;
+}
+.dialog_back{
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0.5;
+}

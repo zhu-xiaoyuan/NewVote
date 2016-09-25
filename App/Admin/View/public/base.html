@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<block name='title'><title>无标题</title></block>
+	<link rel="stylesheet" type="text/css" href="__CSS__/space.css">
+	<link rel="stylesheet" type="text/css" href="__CSS__/layer.css">
+	<link rel="stylesheet" type="text/css" href="__CSS__/page.css">
+	<script type="text/javascript" src="__STATIC__/jquery-1.11.js"></script>
+	<script type="text/javascript" src="__STATIC__/md5.js"></script>
+	<script type="text/javascript" src="__JS__/layer.js"></script>
+	<script type="text/javascript" src="__JS__/page2.js"></script>
+	<script type="text/javascript" src="__JS__/tab.js"></script>
+	
+	<block name="link"></block>
+</head>
+<body>
+	<block name="other"></block>
+	<if condition="$login">
+	<else />
+		<div id="login_bar">
+			<div class="op_back"></div>
+			<h5>登录</h5>
+			<form>
+			<div class="login_form_block">
+				<label class="login_label" for="login_name"><img src="__IMG__/login_name.png"></label>
+				<input type="text" name="login_name" class="login_input" />
+			</div>
+			<div class="login_form_block">
+				<label class="login_label" for="login_password"><img src="__IMG__/login_password.png"></label>
+				<input type="password" name="login_password" class="login_input" />
+			</div>
+			</form>
+			<button id="login_submit">登录</button>
+		</div>
+	</if>
+	<a href="{:U('index/help')}" class="help"></a>
+	<div id="header">
+		<block name="header">
+			<span id="logo"></span>
+			<block name="nav"></block>
+			<if condition="$login">
+			<p id="login-status" value="{$login}">
+				<if condition="$admin">
+						<span id="add_user" title="添加用户"></span>
+				</if>
+				<span id="logout" title="退出"></span>
+			<else />
+			<p id="login-status" value="0">
+				<span id="login">登录</span>
+			</if>
+			</p>
+			<li class="ip static">IP 地址 : {$ip_address}</li>
+		</block>
+	</div>
+	<div id="center"><block name="content"></block></div>
+	<div id="footer">
+		<p>CopyRight 　　　河南科技学院　　　 技术支持: 三月工作室</p>
+	</div>
+	<input class="hide" id="url" value="__URL__" style="display:none">
+	<input class="hide" id="root" value="__ROOT__" style="display:none">
+</body>
+</html>

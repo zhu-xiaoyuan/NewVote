@@ -1,0 +1,190 @@
+.user_form{
+	position: relative;
+	text-align: left;
+	margin: 70px auto 0px auto;
+	width: 700px;
+	padding-left: 120px;
+}
+.form-item{
+	height: 42px;
+	margin-bottom: 20px;
+}
+.item_name{
+	display: inline-block;
+	height: 100%;
+	width: 70px;
+	margin-right: 10px;
+	line-height: 42px;
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+	text-align: right;
+}
+.form-item input{
+	height: 16px;
+	width: 328px;
+	padding: 11px 10px 11px 10px;
+	margin-right: 10px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #666;
+}
+.form_info,.null_info,.form_info_1{
+	color: #999;
+	display: none;
+	height: 16px
+}
+.form_info_block{
+	color: #999;
+	display: none;
+	vertical-align: top;
+}
+.password_info ul{
+	list-style: none;
+	margin: 0px;
+	margin-left: 10px;
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+	box-shadow: 1px 1px 1px #efefef;
+	-moz-box-shadow: 1px 1px 1px #efefef;
+	-webkit-box-shadow: 1px 1px 1px #efefef;
+	background: #f9f9f9;
+	width: 180px;
+}
+.check_bar_1,.check_bar_2,.check_bar_3{
+	line-height: 20px;
+	padding-left: 18px;
+	background: url(../image/reg_icons.png) no-repeat -86px -112px;
+	color: #666;
+	font-family: Arial, Helvetica, STHeiti,"宋体";
+	font-size: 12px;
+	letter-spacing: 0px;
+}
+.ul_item_success{
+	background-position: -86px -128px;
+}
+.ul_item_error{
+	background-position: -86px -144px;
+	color: #fc4343;
+}
+.item_error{
+	color: #fc4343;
+	padding-left: 20px;
+	background: url(../image/err_small.png) 0 0 no-repeat;
+}
+.item_success{
+	color: #fff;
+	padding-left: 20px;
+	background: url(../image/reg_icons.png) -80px 0 no-repeat;
+}
+.input_error{
+	border: 1px solid #E60012;
+	outline-offset: -2px;
+	outline: #E60012 auto 5px;
+}
+.em_a,.em_b{
+	position: absolute;
+	top: 7px;
+	font-size: 20px;
+	font-style: normal;
+}
+.em_bar{
+	position: relative;
+}
+.em_a{
+	color: #ddd;
+	left: 0;
+}
+.em_b{
+	color: #f9f9f9;
+	left: 1px;
+}
+
+#submit{
+	position: relative;
+	left: 80px;
+	background-color: #4490f7;
+	height: 50px;
+	width: 350px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #fff;
+}
+#manage_user{
+	line-height: 14px;
+	font-size: 14px;
+	float: right;
+	margin-top: 10px;
+}
+.main{
+	width: 800px;
+	margin: auto;
+}
+.theme{
+	width: 100%;
+	height: 25px;
+	line-height: 25px;
+	font-family: "微软雅黑";
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0px;
+	margin-top: 10px;
+}
+h2{
+	margin: 0px;
+	text-align: left;
+	font-size: 22px;
+	text-indent: 8px;
+	border-left: 5px solid #59AfE4;
+	color: #616161;
+}
+table{
+	width: 700px;
+}
+.include{
+	margin: 30px auto 0px auto;
+	padding-left: 20px;
+}
+.menu{
+	text-align: left;
+}
+.operate{
+	display: inline-block;
+	margin-left: 4px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+}
+.fun{
+	margin-left: 10px;
+	border-radius: 0px;
+	width: 75px;
+	height: 26px;
+	background: #004000;
+	line-height: 26px;
+	cursor: pointer;
+}
+.user_1{
+	width: 100px;
+}
+.user_2{
+	width: 400px;
+}
+td.user_2{
+	font-size: 13px;
+	letter-spacing: 2px;
+}
+.user_3{
+	width: 200px;
+}
+.del_icon{
+	background-image: url(../image/delete.png);
+	display: inline-block;
+	color: #7979BF;
+	height: 14px;
+	width: 50px;
+	text-align: center;
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,35 @@
+<extend name="Public/base" />
+<block name='title'><title>添加用户</title></block>
+<block name="link">
+	<link rel="stylesheet" type="text/css" href="__CSS__/user.css">
+	<script type="text/javascript" src="__JS__/user.js"></script>
+</block>
+<block name="other">
+</block>
+<block name="nav">
+	<ul id="bar">
+		<li id="launch" class="tab static"><a href="{:U('index/index')}">发起投票</a></li>
+		<li id="call-out" class="tab static"><a href="{:U('Callout/index')}">唱　　票</a></li>
+		<li id="manage" class="tab static"><a href="{:U('Manage/index')}">投票管理</a></li>
+	</ul>
+</block>
+<block name="content">
+<div class="main">
+	<div class="theme">
+		<h2>用户管理</h2>
+	</div>
+	<div class="include">
+	<div class="menu">
+		<label class="operate">批量操作</label><button class="fun">删 除</button>
+	</div>
+	<table>
+		<thead><tr><th class="user_1"><input type="checkbox" name="all"></th><th class="user_2">用户名</th><th class="user_3">操作</th></tr></thead>
+		<tbody>
+		<volist name="user_list" id="vo" key="k">
+			<tr><td><input type="checkbox" name="item" value="{$vo.id}"></td><td class="user_2">{$vo.account}</td><td><a class="del_icon" data='{$vo.id}'></a></td></tr>
+		</volist>
+		</tbody>
+	</table>
+	</div>
+</div>
+</block>

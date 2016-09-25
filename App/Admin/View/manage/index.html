@@ -1,0 +1,111 @@
+<extend name="Public/base" />
+<block name='title'><title>投票管理</title></block>
+<block name="link">
+	<link href="__STATIC__/datetimepicker/css/datetimepicker.css" rel="stylesheet" type="text/css">
+    <link href="__STATIC__/datetimepicker/css/dropdown.css" rel="stylesheet" type="text/css">
+    <link href="__CSS__/manage.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="__STATIC__/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="__STATIC__/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="__JS__/time.js"></script>
+    <script type="text/javascript" src="__JS__/manage.js"></script>
+</block>
+<block name="nav">
+	<ul id="bar">
+		<li id="launch" class="tab static"><a href="{:U('index/index')}">发起投票</a></li>
+		<li id="call-out" class="tab static"><a href="{:U('Callout/index')}">唱　　票</a></li>
+		<li id="manage" class="tab action"><a href="{:U('Manage/index')}">投票管理</a></li>
+	</ul>
+</block>
+<block name="content">
+<div id="search_panel">
+	<form id="search-form" action="{:U('Manage/search')}">
+		<div class="search-item">
+			<label for="search-date">发起时间:</label>
+			<input type="text" name="search_date_start" id="search-date-start" value="{$search_info.search_date_start}" /><img class="calendar" src="__IMG__/calendar.png">
+			<label id="to">至</label><input type="text" name="search_date_end" id="search-date-end" value="{$search_info.search_date_end}" /><img class="calendar" src="__IMG__/calendar.png">
+		</div>
+		<div class="search-item">
+
+			<label for="search_state">状　　态:</label>
+			<div class="ui">
+			<span class='ui-select'>全部</span><span class='ui-down'></span>
+			<ul class="ui-options">
+				<li class="ui-option-item" for="0">全部</li>
+				<li class="ui-option-item" for="1">正在投票</li>
+				<li class="ui-option-item" for="2">待投票</li>
+				<li class="ui-option-item" for="3">投票结束</li>
+				<li class="ui-option-item" for="4">已关闭</li>
+			</ul></div>
+			<select name="search_state" id="search-state">
+				<if condition="$search_info.search_state eq 0">
+					<option value="0" selected='selected'>全　　部</option>
+				<else />
+					<option value="0">全　　部</option>
+				</if>
+				<if condition="$search_info.search_state eq 1">
+					<option value="1"   selected='selected'>正在投票</option>
+				<else />
+					<option value="1">正在投票</option>
+				</if>
+				<if condition="$search_info.search_state eq '2'">
+					<option value="2"  selected='selected'>待 投 票</option>
+				<else />
+					<option value="2">待 投 票</option>
+				</if>
+				<if condition="$search_info.search_state eq 3">
+					<option value="3"  selected='selected'>投票结束</option>
+				<else />
+					<option value="3">投票结束</option>
+				</if>
+				<if condition="$search_info.search_state eq 4">
+					<option value="4"  selected='selected'>已 关 闭</option>
+				<else />
+					<option value="4">已 关 闭</option>
+				</if>
+			</select>
+		</div>
+		<div class="search-item">
+			<label for="search_theme">主　　题:</label>
+			<input type="text" name="search_theme" id="search-theme" value="{$search_info.search_theme}" />
+			<!-- <input type="text" name="search_theme" id="search-theme" /> -->
+			<button id="search">搜索</button>
+		</div>
+		
+	</form>
+</div >
+	<table  ellpadding="0" cellspacing="0">
+		<tr>
+			<th id="vote_1">序号</th><th id="vote_2">主题</th><th id="vote_3">发起时间</th><th id="vote_3">状态</th><th id="vote_3">操作</th>
+		</tr>
+		<if condition="$login">
+		<volist name="vote_list" id="vo" key="k">
+			<tr value="{$vo.id}">
+				<td>{$k}</td><td><a class="show_info">{$vo.theme}</a></td>
+				<if condition="$vo['start_time']">
+				<td>{$vo.start_time|date="Y-m-d",###}</td>
+				<else /><td>未发起</td>
+				</if>
+				<switch name="vo.status">
+				    <case value="1"><td>正在投票</td><td><a  url="{:U('Manage/changeStatus')}"  class='operate-close-vote' onclick="changeStatus(this,4)">关闭</a></td></case>
+				    <case value="2">
+				    	<td>待投票</td>
+				    	<td>
+					    	<a url="{:U('Manage/changeStatus')}" class='operate-open-vote' onclick="changeStatus(this,1)">启动</a>
+					    	<a class='operate-edit-vote' href=<?php echo U("index/index",array('id'=>$vo['id'])); ?>>编辑</a>
+					    	<a  url="{:U('Manage/changeStatus')}" class='operate-close-vote' onclick="changeStatus(this,4)">关闭</a>
+				    	</td>
+				    </case>
+				    <case value="3"><td>投票结束</td><td><a url="{:U('Manage/rebowl')}" class='operate-rebowl-vote'  onclick="rebowl(this,{$vo.id})">重投</a></td></case>
+				    <case value="4"><td>已关闭</td><td><a url="{:U('Manage/changeStatus')}" class='operate-open-vote' onclick="changeStatus(this,2)">启动</a></td></case>
+				    <default />
+				</switch>
+			</tr>
+		</volist>
+		<else />
+		<tr><div>登录查看信息</div></tr>
+		</if>
+	</table>
+	<div class="page">
+		{$page}
+	</div>
+</block>

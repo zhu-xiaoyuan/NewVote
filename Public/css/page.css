@@ -1,0 +1,56 @@
+.page{
+	text-align: right;
+	margin-bottom: 20px;
+}
+.page .num,.page .current,.page .prev,.page .next{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0px 2px;
+	text-decoration: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	vertical-align: middle;
+	text-align: center;
+}
+.page .prev{
+	font-size: 0px;
+	background-image: url(../image/page_prov_a.png);
+}
+.page .next{
+	font-size: 0px;
+	background-image: url(../image/page_next_a.png);
+}
+.page .current{
+	background-color: #F8B551;
+	
+}
+.page>span{
+	text-align: center;
+	cursor: pointer;
+}
+.page .page_item,.page .page_prev,.page .page_next,.page .un_next,.page .un_prev{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0px 2px;
+	vertical-align: middle; 
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+.page .now_page{
+	background-image: url(../image/back_page.png);
+}
+.page span.page_prev{
+	background-image: url(../image/page_prov_a.png);
+}
+.page span.page_next{
+	background-image: url(../image/page_next_a.png);
+}
+.page span.un_prev{
+	background-image: url(../image/page_prov_b.png);
+}
+.page span.un_next{
+	background-image: url(../image/page_next_b.png);
+}
